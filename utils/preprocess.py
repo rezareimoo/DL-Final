@@ -11,11 +11,9 @@ from torchvision import transforms, utils
 path = Path('../data/ModelNet40')
 
 def read_off(file):
-    ye = file.readline().strip()
-    print(ye)
-    if 'OFF' != ye:
-        print(file)
-        #raise('Not a valid OFF header')
+    if 'OFF' != file.readline().strip():
+        #print(file.readline().strip())
+        raise('Not a valid OFF header')
     n_verts, n_faces, __ = tuple([int(s) for s in file.readline().strip().split(' ')])
     verts = [[float(s) for s in file.readline().strip().split(' ')] for i_vert in range(n_verts)]
     faces = [[int(s) for s in file.readline().strip().split(' ')][1:] for i_face in range(n_faces)]
