@@ -1,0 +1,16 @@
+name: dl-final-env
+channels:
+  - defaults
+dependencies:
+  - python==3.8.10
+  - matplotlib
+  - tqdm==4.64.1
+  - jupyter==1.0.0
+  - pip
+  - pip:
+      - torch==1.13.1
+      - torchtext==0.14.1
+      - notebook
+      - numpy
+      - spacy==3.4.4
+      - path
