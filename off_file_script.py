@@ -1,7 +1,7 @@
 import os
 
 # abspath to a folder as a string
-folder = 'data/ModelNet40_Test - Copy'
+folder = 'data/ModelNet40'
 
 # GET ALL INCORRECT FILES AND STORE IN TXT:
 
@@ -24,7 +24,7 @@ folder = 'data/ModelNet40_Test - Copy'
      
 
 
-     
+
 # SCRIPT FOR FIXING THE FILES:
 
 with open('incorrect_files.txt', 'r') as f:
