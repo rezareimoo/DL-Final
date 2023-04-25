@@ -8,7 +8,7 @@ import scipy.spatial.distance
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
 
-path = Path('../data/ModelNet40')
+path = Path('../data/ModelNet10')
 
 def read_off(file):
     if 'OFF' != file.readline().strip():
@@ -49,11 +49,21 @@ class PointSampler(object):
             areas[i] = (self.triangle_area(verts[faces[i][0]],
                                            verts[faces[i][1]],
                                            verts[faces[i][2]]))
-            
-        sampled_faces = (random.choices(faces, 
-                                      weights=areas,
-                                      cum_weights=None,
-                                      k=self.output_size))
+        
+        indicesAreasSort = np.argsort(areas)    
+        indicesAreasSort = np.flip(indicesAreasSort) ## choose faces with greatest areas
+        sampled_faces = []
+        counter = 0
+        for index in indicesAreasSort:
+            if (counter == self.output_size):
+                break
+            sampled_faces.append(faces[index])
+            counter += 1
+        print(sampled_faces)
+        # sampled_faces = (random.choices(faces, 
+        #                               weights=areas,
+        #                               cum_weights=None,
+        #                               k=self.output_size))
         
         sampled_points = np.zeros((self.output_size, 3))
 
