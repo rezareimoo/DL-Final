@@ -1,6 +1,7 @@
 # DL-Final
 
-initial implementation of PointNet\\
+initial implementation of PointNet
+
 Modifications to Model
 Greatest Areas
 Tune the number of faces
