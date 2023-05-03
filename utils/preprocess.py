@@ -44,28 +44,34 @@ class PointSampler(object):
         verts, faces = mesh
         verts = np.array(verts)
         areas = np.zeros((len(faces)))
+        #print(faces)
 
         for i in range(len(areas)):
             areas[i] = (self.triangle_area(verts[faces[i][0]],
                                            verts[faces[i][1]],
                                            verts[faces[i][2]]))
+            #print(areas[i])
         
-        indicesAreasSort = np.argsort(areas)    
-        indicesAreasSort = np.flip(indicesAreasSort) ## choose faces with greatest areas
-        sampled_faces = []
-        counter = 0
-        for index in indicesAreasSort:
-            if (counter == self.output_size):
-                break
-            sampled_faces.append(faces[index])
-            counter += 1
-        print(sampled_faces)
-        # sampled_faces = (random.choices(faces, 
-        #                               weights=areas,
-        #                               cum_weights=None,
-        #                               k=self.output_size))
+        #choose faces with greatest areas
+        ##indicesAreasSort = np.argsort(areas) 
+        ##indicesAreasSort = np.flip(indicesAreasSort) 
+        # sampled_faces = []
+        # counter = 0
+        # for index in indicesAreasSort:
+        #     print("here3")
+        #     print(index)
+        #     if (counter == self.output_size):
+        #         break
+        #     #print(faces[index])
+        #     sampled_faces.append(faces[index])
+        #     counter += 1
+        sampled_faces = (random.choices(faces, 
+                                      weights=areas,
+                                      cum_weights=None,
+                                      k=self.output_size))
         
         sampled_points = np.zeros((self.output_size, 3))
+
 
         for i in range(len(sampled_faces)):
             sampled_points[i] = (self.sample_point(verts[sampled_faces[i][0]],

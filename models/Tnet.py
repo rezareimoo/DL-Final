@@ -24,15 +24,15 @@ class Tnet(nn.Module):
    def forward(self, input):
       # input.shape == (bs,n,3)
       bs = input.size(0)
-      xb = F.tanh(self.bn1(self.conv1(input))) ## change back to relu later
-      xb = F.tanh(self.bn2(self.conv2(xb)))
-      xb = F.tanh(self.bn3(self.conv3(xb)))
-      #pool = nn.MaxPool1d(xb.size(-1))(xb)
-      mixedPooling = random.randint(0, 1)
-      pool = mixedPooling * nn.MaxPool1d(xb.size(-1))(xb) + (1 - mixedPooling) * nn.AvgPool1d(xb.size(-1))(xb)## trying mixed pooling instead of maxpooling
+      xb = F.relu(self.bn1(self.conv1(input)))
+      xb = F.relu(self.bn2(self.conv2(xb)))
+      xb = F.relu(self.bn3(self.conv3(xb)))
+      pool = nn.MaxPool1d(xb.size(-1))(xb)
+      #mixedPooling = random.randint(0, 1)
+      #pool = mixedPooling * nn.MaxPool1d(xb.size(-1))(xb) + (1 - mixedPooling) * nn.AvgPool1d(xb.size(-1))(xb)## trying mixed pooling instead of maxpooling
       flat = nn.Flatten(1)(pool)
-      xb = F.tanh(self.bn4(self.fc1(flat)))
-      xb = F.tanh(self.bn5(self.fc2(xb)))
+      xb = F.relu(self.bn4(self.fc1(flat)))
+      xb = F.relu(self.bn5(self.fc2(xb)))
       
       # initialize as identity
       init = torch.eye(self.k, requires_grad=True).repeat(bs,1,1)

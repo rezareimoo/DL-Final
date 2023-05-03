@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from models.Tnet import Tnet
+import random
 
 class Transform(nn.Module):
    def __init__(self):
@@ -23,7 +24,7 @@ class Transform(nn.Module):
         # batch matrix multiplication
         xb = torch.bmm(torch.transpose(input,1,2), matrix3x3).transpose(1,2)
 
-        xb = F.relu(self.bn1(self.conv1(xb)))
+        xb = torch.relu(self.bn1(self.conv1(xb)))
 
         matrix64x64 = self.feature_transform(xb)
         xb = torch.bmm(torch.transpose(xb,1,2), matrix64x64).transpose(1,2)
@@ -31,5 +32,7 @@ class Transform(nn.Module):
         xb = F.relu(self.bn2(self.conv2(xb)))
         xb = self.bn3(self.conv3(xb))
         xb = nn.MaxPool1d(xb.size(-1))(xb)
+        #mixedPooling = random.randint(0, 1)
+        #xb = mixedPooling * nn.MaxPool1d(xb.size(-1))(xb) + (1 - mixedPooling) * nn.AvgPool1d(xb.size(-1))(xb)## trying mixed pooling instead of maxpooling
         output = nn.Flatten(1)(xb)
         return output, matrix3x3, matrix64x64
