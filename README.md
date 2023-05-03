@@ -2,10 +2,10 @@
 
 initial implementation of PointNet
 
-Modifications to Model
-Greatest Areas
-Tune the number of faces
-mixed pooling
-Janossy pooling
-play around with loss functions
-tanh instead of relu try sigmoid
+Modifications to Model </br>
+Greatest Areas </br>
+Tune the number of faces </br>
+mixed pooling </br>
+Janossy pooling </br>
+play around with loss functions </br>
+tanh instead of relu try sigmoid </br>
