@@ -1,11 +1,11 @@
 # DL-Final
 
-initial implementation of PointNet
-
-Modifications to Model </br>
-Greatest Areas </br>
-Tune the number of faces </br>
-mixed pooling </br>
-Janossy pooling </br>
-play around with loss functions </br>
-tanh instead of relu try sigmoid </br>
+* Reduced Point Sample
+* Increased Point Sample
+* Change in Point Sampling Implementation
+* Denser Model
+* Adaptive Max Pooling
+* Mixed Pooling
+* Tanh Activation Function
+* Adadelta Optimizer
+* Using Different Loss Functions
