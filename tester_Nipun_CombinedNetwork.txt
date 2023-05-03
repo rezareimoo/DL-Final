@@ -1,0 +1,65 @@
+[Epoch: 1, Batch:   10 /  120], loss: 0.201
+[Epoch: 1, Batch:   20 /  120], loss: 0.195
+[Epoch: 1, Batch:   30 /  120], loss: 0.172
+[Epoch: 1, Batch:   40 /  120], loss: 0.173
+[Epoch: 1, Batch:   50 /  120], loss: 0.173
+[Epoch: 1, Batch:   60 /  120], loss: 0.193
+[Epoch: 1, Batch:   70 /  120], loss: 0.195
+[Epoch: 1, Batch:   80 /  120], loss: 0.156
+[Epoch: 1, Batch:   90 /  120], loss: 0.147
+[Epoch: 1, Batch:  100 /  120], loss: 0.149
+[Epoch: 1, Batch:  110 /  120], loss: 0.174
+[Epoch: 1, Batch:  120 /  120], loss: 0.135
+Valid accuracy: 36 %
+[Epoch: 2, Batch:   10 /  120], loss: 0.123
+[Epoch: 2, Batch:   20 /  120], loss: 0.123
+[Epoch: 2, Batch:   30 /  120], loss: 0.116
+[Epoch: 2, Batch:   40 /  120], loss: 0.104
+[Epoch: 2, Batch:   50 /  120], loss: 0.120
+[Epoch: 2, Batch:   60 /  120], loss: 0.121
+[Epoch: 2, Batch:   70 /  120], loss: 0.136
+[Epoch: 2, Batch:   80 /  120], loss: 0.112
+[Epoch: 2, Batch:   90 /  120], loss: 0.132
+[Epoch: 2, Batch:  100 /  120], loss: 0.150
+[Epoch: 2, Batch:  110 /  120], loss: 0.117
+[Epoch: 2, Batch:  120 /  120], loss: 0.125
+Valid accuracy: 33 %
+[Epoch: 3, Batch:   10 /  120], loss: 0.112
+[Epoch: 3, Batch:   20 /  120], loss: 0.103
+[Epoch: 3, Batch:   30 /  120], loss: 0.097
+[Epoch: 3, Batch:   40 /  120], loss: 0.131
+[Epoch: 3, Batch:   50 /  120], loss: 0.155
+[Epoch: 3, Batch:   60 /  120], loss: 0.129
+[Epoch: 3, Batch:   70 /  120], loss: 0.133
+[Epoch: 3, Batch:   80 /  120], loss: 0.110
+[Epoch: 3, Batch:   90 /  120], loss: 0.120
+[Epoch: 3, Batch:  100 /  120], loss: 0.109
+[Epoch: 3, Batch:  110 /  120], loss: 0.148
+[Epoch: 3, Batch:  120 /  120], loss: 0.110
+Valid accuracy: 34 %
+[Epoch: 4, Batch:   10 /  120], loss: 0.116
+[Epoch: 4, Batch:   20 /  120], loss: 0.116
+[Epoch: 4, Batch:   30 /  120], loss: 0.145
+[Epoch: 4, Batch:   40 /  120], loss: 0.096
+[Epoch: 4, Batch:   50 /  120], loss: 0.104
+[Epoch: 4, Batch:   60 /  120], loss: 0.106
+[Epoch: 4, Batch:   70 /  120], loss: 0.121
+[Epoch: 4, Batch:   80 /  120], loss: 0.113
+[Epoch: 4, Batch:   90 /  120], loss: 0.092
+[Epoch: 4, Batch:  100 /  120], loss: 0.106
+[Epoch: 4, Batch:  110 /  120], loss: 0.090
+[Epoch: 4, Batch:  120 /  120], loss: 0.112
+Valid accuracy: 38 %
+[Epoch: 5, Batch:   10 /  120], loss: 0.080
+[Epoch: 5, Batch:   20 /  120], loss: 0.096
+[Epoch: 5, Batch:   30 /  120], loss: 0.109
+[Epoch: 5, Batch:   40 /  120], loss: 0.093
+[Epoch: 5, Batch:   50 /  120], loss: 0.091
+[Epoch: 5, Batch:   60 /  120], loss: 0.100
+[Epoch: 5, Batch:   70 /  120], loss: 0.116
+[Epoch: 5, Batch:   80 /  120], loss: 0.081
+[Epoch: 5, Batch:   90 /  120], loss: 0.095
+[Epoch: 5, Batch:  100 /  120], loss: 0.079
+[Epoch: 5, Batch:  110 /  120], loss: 0.085
+[Epoch: 5, Batch:  120 /  120], loss: 0.107
+Valid accuracy: 35 %
